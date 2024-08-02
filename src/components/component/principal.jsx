@@ -235,7 +235,9 @@ export function Principal() {
                     isSpanish={isSpanish}
                   ></LogoLink>
                 </div>
-                <h3 className="text-xl font-bold text-[#7291be]">Spring Boot</h3>
+                <h3 className="text-xl font-bold text-[#7291be]">
+                  Spring Boot
+                </h3>
                 <p className="text-[#6b7a8f] h-32">
                   {isSpanish
                     ? "He desarrollado microservicios y APIs RESTful con Spring Boot, integrando soluciones de seguridad y manejo de datos."
@@ -265,10 +267,11 @@ export function Principal() {
                   <LogoLink
                     logo={"/reactlogo.png"}
                     linkesp={"https://es.wikipedia.org/wiki/React"}
-                    linking={"https://en.wikipedia.org/wiki/React_(JavaScript_library)"}
+                    linking={
+                      "https://en.wikipedia.org/wiki/React_(JavaScript_library)"
+                    }
                     isSpanish={isSpanish}
-                    >
-                  </LogoLink>
+                  ></LogoLink>
                 </div>
                 <h3 className="text-xl font-bold text-[#7291be]">React</h3>
                 <p className="text-[#6b7a8f] h-32">
@@ -285,8 +288,7 @@ export function Principal() {
                     linkesp={"https://es.wikipedia.org/wiki/Node.js"}
                     linking={"https://en.wikipedia.org/wiki/Node.js"}
                     isSpanish={isSpanish}
-                    >
-                  </LogoLink>
+                  ></LogoLink>
                 </div>
                 <h3 className="text-xl font-bold text-[#7291be]">NodeJs</h3>
                 <p className="text-[#6b7a8f] h-32">
@@ -303,8 +305,7 @@ export function Principal() {
                     linkesp={"https://es.wikipedia.org/wiki/HTML"}
                     linking={"https://en.wikipedia.org/wiki/HTML"}
                     isSpanish={isSpanish}
-                    >
-                  </LogoLink>
+                  ></LogoLink>
                 </div>
                 <h3 className="text-xl font-bold text-[#7291be]">HTML</h3>
                 <p className="text-[#6b7a8f] h-32">
@@ -321,8 +322,7 @@ export function Principal() {
                     linkesp={"https://es.wikipedia.org/wiki/CSS"}
                     linking={"https://en.wikipedia.org/wiki/CSS"}
                     isSpanish={isSpanish}
-                    >
-                  </LogoLink>
+                  ></LogoLink>
                 </div>
                 <h3 className="text-xl font-bold text-[#7291be]">CSS</h3>
                 <p className="text-[#6b7a8f] h-32">
@@ -339,8 +339,7 @@ export function Principal() {
                     linkesp={"https://es.wikipedia.org/wiki/Tailwind_CSS"}
                     linking={"https://en.wikipedia.org/wiki/Tailwind_CSS"}
                     isSpanish={isSpanish}
-                    >
-                  </LogoLink>
+                  ></LogoLink>
                 </div>
                 <h3 className="text-xl font-bold text-[#7291be]">Tailwind</h3>
                 <p className="text-[#6b7a8f] h-32">
@@ -370,9 +369,13 @@ export function Principal() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
-                <div className="grid gap-1 justify-end">
-                  <h3 className="text-xl font-bold text-[#7291be]">Todo App</h3>
-                  <p className="text-[#ffffff]">Lorem ipsum</p>
+                <div className="grid gap-4 justify-center">
+                  <h3 className="font-bold text-[#7291be] text-3xl">Vet App</h3>
+                  <p className="text-[#ffffff]">
+                    {isSpanish
+                      ? "Una aplicación desarrollada con Java, SQL y Spring. Guarda información en una base de datos mediante una API"
+                      : "App developed with Java, SQL and Spring. It stores information on a database through an API"}
+                  </p>
                   <div className="flex gap-2">
                     <Link
                       href="#"
@@ -412,8 +415,8 @@ export function Principal() {
                 />
               </div>
               <div className="flex flex-col justify-center space-y-4">
-                <div className="grid gap-1">
-                  <h3 className="text-xl font-bold text-[#7291be]">
+                <div className="grid gap-4">
+                  <h3 className="font-bold text-[#7291be] text-2xl">
                     Weather App
                   </h3>
                   <p className="text-[#ffffff]">
