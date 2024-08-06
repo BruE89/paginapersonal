@@ -9,6 +9,7 @@ import axios from "axios";
 import DownloadCV from "./cv";
 import Image from "next/image";
 import LogoLink from "./logolink";
+import Looper from "./looper"
 
 export function Principal() {
   const [isSpanish, setIsSpanish] = useState(false);
@@ -66,7 +67,7 @@ export function Principal() {
           <Link
             href="https://www.linkedin.com/in/brunoestala/"
             //Color de Hover boton Linkedin
-            className="text-white hover:text-[#8b9297] transition-colors"
+            className="text-white hover:text-[#8b9297] transition-colors animate-fade-in-down"
             prefetch={false}
             target="_blank"
             rel="noopener noreferrer"
@@ -77,7 +78,7 @@ export function Principal() {
           <Link
             href="https://github.com/BruE89"
             //Color de Hover boton GitHub
-            className="text-white hover:text-[#8b9297] transition-colors"
+            className="text-white hover:text-[#8b9297] transition-colors animate-fade-in-down"
             prefetch={false}
             target="_blank"
             rel="noopener noreferrer"
@@ -88,7 +89,7 @@ export function Principal() {
           <Link
             href="https://bruno-estala.slack.com"
             //Color de Hover boton Slack
-            className="text-white hover:text-[#8b9297] transition-colors"
+            className="text-white hover:text-[#8b9297] transition-colors animate-fade-in-down"
             prefetch={false}
             target="_blank"
             rel="noopener noreferrer"
@@ -96,9 +97,9 @@ export function Principal() {
             <SlackIcon className="h-6 w-6" />
             <span className="sr-only">Slack</span>
           </Link>
-          <Button
+          <Button className="animate-fade-in-down"
             onClick={handleLanguageToggle}
-            //Color de fondo del boton traductor // Color de Hover del boton traductor
+          //Color de fondo del boton traductor // Color de Hover del boton traductor
           >
             {isSpanish ? "Translate to English" : "Traducir al Español"}
           </Button>
@@ -106,7 +107,7 @@ export function Principal() {
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
             href="#about"
-            className="text-sm font-medium hover:underline underline-offset-4 text-white"
+            className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
             prefetch={false}
           >
             {isSpanish ? "Sobre m\u00ED" : "About"}
@@ -114,7 +115,7 @@ export function Principal() {
 
           <Link
             href="#skills"
-            className="text-sm font-medium hover:underline underline-offset-4 text-white"
+            className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
             prefetch={false}
           >
             {isSpanish ? "Habilidades" : "Skills"}
@@ -122,7 +123,7 @@ export function Principal() {
 
           <Link
             href="#projects"
-            className="text-sm font-medium hover:underline underline-offset-4 text-white"
+            className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
             prefetch={false}
           >
             {isSpanish ? "Proyectos" : "Projects"}
@@ -130,7 +131,7 @@ export function Principal() {
 
           <Link
             href="#contact"
-            className="text-sm font-medium hover:underline underline-offset-4 text-white"
+            className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
             prefetch={false}
           >
             {isSpanish ? "Contacto" : "Contact"}
@@ -143,15 +144,15 @@ export function Principal() {
         <section id="about" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-2 items-center">
             <div className="text-center md:text-left">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-[#ffffff]">
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-[#ffffff] animate-fade-in-left">
                 {isSpanish ? "Hola, soy Bruno Estala" : "Hi, I'm Bruno Estala"}
               </h1>
-              <p className="text-[#ffffff] text-lg mt-4">
+              <p className="text-[#ffffff] text-lg mt-4 animate-fade-in-right">
                 {isSpanish
                   ? "Soy un desarrollador de React apasionado con una s\u00F3lida experiencia en JavaScript y Tailwind CSS. Me encanta crear aplicaciones web visualmente atractivas y f\u00E1ciles de usar."
                   : "I'm a passionate React developer with a strong background in JavaScript and Tailwind CSS. I love creating visually appealing and user-friendly web applications."}
               </p>
-              <div className="mt-6">
+              <div className="mt-6 animate-fade-in-up">
                 <DownloadCV isSpanish={isSpanish} />
               </div>
             </div>
@@ -191,7 +192,7 @@ export function Principal() {
                 <div className="flex items-end justify-center mb-4 h-40">
                   {/*LOGO JAVA" />*/}
                   <LogoLink
-                    logo={"/javalogo.png"}
+                    logo={"/habilidades/javalogo.png"}
                     linkesp={
                       "https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)"
                     }
@@ -212,7 +213,7 @@ export function Principal() {
                 <div className="flex items-end justify-center mb-4 h-40">
                   {/*MYSQL LOGO*/}
                   <LogoLink
-                    logo={"/mysqllogo.png"}
+                    logo={"/habilidades/mysqllogo.png"}
                     linkesp={"https://es.wikipedia.org/wiki/MySQL"}
                     linking={"https://en.wikipedia.org/wiki/MySQL"}
                     isSpanish={isSpanish}
@@ -229,7 +230,7 @@ export function Principal() {
                 <div className="flex items-end justify-center mb-4 h-40">
                   {/*SPRING LOGO*/}
                   <LogoLink
-                    logo={"/springbootlogo.png"}
+                    logo={"/habilidades/springbootlogo.png"}
                     linkesp={"https://es.wikipedia.org/wiki/Spring_Framework"}
                     linking={"https://en.wikipedia.org/wiki/Spring_Framework"}
                     isSpanish={isSpanish}
@@ -246,9 +247,9 @@ export function Principal() {
               </div>
               <div className="grid gap-1">
                 <div className="flex items-end justify-center mb-4 h-40">
-                  {/*<MountainIcon className="h-6 w-6 text-[#4b6a9b]" />*/}
+                  {/*JAVASCRIPT LOGO*/}
                   <LogoLink
-                    logo={"/jslogo.png"}
+                    logo={"/habilidades/jslogo.png"}
                     linkesp={"https://es.wikipedia.org/wiki/JavaScript"}
                     linking={"https://en.wikipedia.org/wiki/JavaScript"}
                     isSpanish={isSpanish}
@@ -265,7 +266,7 @@ export function Principal() {
                 <div className="flex items-end justify-center mb-4 h-40">
                   {/*REACT LOGO*/}
                   <LogoLink
-                    logo={"/reactlogo.png"}
+                    logo={"/habilidades/reactlogo.png"}
                     linkesp={"https://es.wikipedia.org/wiki/React"}
                     linking={
                       "https://en.wikipedia.org/wiki/React_(JavaScript_library)"
@@ -284,7 +285,7 @@ export function Principal() {
                 <div className="flex items-end justify-center mb-4 h-40">
                   {/*NODEJS LOGO*/}
                   <LogoLink
-                    logo={"/nodelogo.png"}
+                    logo={"/habilidades/nodelogo.png"}
                     linkesp={"https://es.wikipedia.org/wiki/Node.js"}
                     linking={"https://en.wikipedia.org/wiki/Node.js"}
                     isSpanish={isSpanish}
@@ -301,7 +302,7 @@ export function Principal() {
                 <div className="flex items-end justify-center mb-4 h-40">
                   {/*HTML LOGO*/}
                   <LogoLink
-                    logo={"/htmllogo.png"}
+                    logo={"/habilidades/htmllogo.png"}
                     linkesp={"https://es.wikipedia.org/wiki/HTML"}
                     linking={"https://en.wikipedia.org/wiki/HTML"}
                     isSpanish={isSpanish}
@@ -318,7 +319,7 @@ export function Principal() {
                 <div className="flex items-end justify-center mb-4 h-40">
                   {/*CSS LOGO*/}
                   <LogoLink
-                    logo={"/csslogo.png"}
+                    logo={"/habilidades/csslogo.png"}
                     linkesp={"https://es.wikipedia.org/wiki/CSS"}
                     linking={"https://en.wikipedia.org/wiki/CSS"}
                     isSpanish={isSpanish}
@@ -333,9 +334,9 @@ export function Principal() {
               </div>
               <div className="grid gap-1">
                 <div className="flex items-end justify-center mb-4 h-40">
-                  {/*<MountainIcon className="h-6 w-6 text-[#4b6a9b]" />*/}
+                  {/*TAILWIND LOGO*/}
                   <LogoLink
-                    logo={"/tailwindlogo.png"}
+                    logo={"/habilidades/tailwindlogo.png"}
                     linkesp={"https://es.wikipedia.org/wiki/Tailwind_CSS"}
                     linking={"https://en.wikipedia.org/wiki/Tailwind_CSS"}
                     isSpanish={isSpanish}
@@ -349,6 +350,12 @@ export function Principal() {
                 </p>
               </div>
             </div>
+
+            <div>
+              {/*Looper de la sección de tecnologías*/}
+              <Looper isSpanish={isSpanish} />
+            </div>
+
           </div>
         </section>
 
@@ -416,7 +423,7 @@ export function Principal() {
               </div>
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-4">
-                  <h3 className="font-bold text-[#7291be] text-2xl">
+                  <h3 className="font-bold text-[#7291be] text-3xl">
                     Weather App
                   </h3>
                   <p className="text-[#ffffff]">
@@ -457,7 +464,7 @@ export function Principal() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#7291be]">
                   {isSpanish ? "Ponte en Contacto" : "Get in Touch"}
                 </h2>
-                <p className="max-w-[700px] text-[#7291be] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[700px] text-[#6b7a8f] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {isSpanish
                     ? "No dudes en comunicarte conmigo si tienes alguna pregunta o si te gustar\u00EDa colaborar en un proyecto."
                     : "Feel free to reach out to me if you have any questions or would like to collaborate on a project."}
