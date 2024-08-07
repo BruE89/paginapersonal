@@ -9,7 +9,11 @@ import axios from "axios";
 import DownloadCV from "./cv";
 import Image from "next/image";
 import LogoLink from "./logolink";
-import Looper from "./looper"
+import Looper from "./looper";
+
+import { Fragment } from "react";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export function Principal() {
   const [isSpanish, setIsSpanish] = useState(true);
@@ -56,9 +60,8 @@ export function Principal() {
   return (
     // Fondo de seccion principal // Color de texto NavBar y boton de CV
     <div className="flex flex-col min-h-[100dvh] bg-[#294a6b] text-[#ffffff]">
-
       {/*Sección NavBar---------------------------------------------------------------------------------------------------------*/}
-      <header className="fixed top-0 left-0 w-full px-4 lg:px-6 h-14 flex items-center bg-[#3d5a86] z-50">
+      <header className="fixed top-0 left-0 w-full px-4 lg:px-6 h-14 flex items-center bg-[#3d5a86] z-50 ">
         <div className="flex items-center gap-4">
           {/*Botón LinkedIn*/}
           <Link
@@ -96,50 +99,98 @@ export function Principal() {
             <span className="sr-only">Slack</span>
           </Link>
           {/*Botón Traductor*/}
-          <Button className="animate-fade-in-down"
+          <Button
+            className="animate-fade-in-down"
             onClick={handleLanguageToggle}
           >
             {isSpanish ? "Translate to English" : "Traducir al Español"}
           </Button>
         </div>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            href="#about"
-            className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
-            prefetch={false}
-          >
-            {isSpanish ? "Sobre m\u00ED" : "About"}
-          </Link>
-
-          <Link
-            href="#skills"
-            className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
-            prefetch={false}
-          >
-            {isSpanish ? "Habilidades" : "Skills"}
-          </Link>
-
-          <Link
-            href="#projects"
-            className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
-            prefetch={false}
-          >
-            {isSpanish ? "Proyectos" : "Projects"}
-          </Link>
-
-          <Link
-            href="#contact"
-            className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
-            prefetch={false}
-          >
-            {isSpanish ? "Contacto" : "Contact"}
-          </Link>
+          <div className="block lg:hidden">
+            <Menu as="div" className="relative">
+              <div>
+                <MenuButton className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-[#3d5a86] text-sm font-medium text-white hover:bg-[#0b2845] focus:outline-none">
+                  <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                </MenuButton>
+              </div>
+              <MenuItems className="origin-top-right absolute right-4 mt-4 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none bg-[#3d5a86]">
+                <div className="py-1 bg-white">
+                  <MenuItem as={Fragment}>
+                    <Link
+                      href="#about"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:underline"
+                      prefetch={false}
+                    >
+                      {isSpanish ? "Sobre mí" : "About"}
+                    </Link>
+                  </MenuItem>
+                  <MenuItem as={Fragment}>
+                    <Link
+                      href="#skills"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:underline"
+                      prefetch={false}
+                    >
+                      {isSpanish ? "Habilidades" : "Skills"}
+                    </Link>
+                  </MenuItem>
+                  <MenuItem as={Fragment}>
+                    <Link
+                      href="#projects"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:underline"
+                      prefetch={false}
+                    >
+                      {isSpanish ? "Proyectos" : "Projects"}
+                    </Link>
+                  </MenuItem>
+                  <MenuItem as={Fragment}>
+                    <Link
+                      href="#contact"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:underline"
+                      prefetch={false}
+                    >
+                      {isSpanish ? "Contacto" : "Contact"}
+                    </Link>
+                  </MenuItem>
+                </div>
+              </MenuItems>
+            </Menu>
+          </div>
+          <div className="hidden lg:flex gap-4 sm:gap-6">
+            <Link
+              href="#about"
+              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
+              prefetch={false}
+            >
+              {isSpanish ? "Sobre mí" : "About"}
+            </Link>
+            <Link
+              href="#skills"
+              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
+              prefetch={false}
+            >
+              {isSpanish ? "Habilidades" : "Skills"}
+            </Link>
+            <Link
+              href="#projects"
+              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
+              prefetch={false}
+            >
+              {isSpanish ? "Proyectos" : "Projects"}
+            </Link>
+            <Link
+              href="#contact"
+              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
+              prefetch={false}
+            >
+              {isSpanish ? "Contacto" : "Contact"}
+            </Link>
+          </div>
         </nav>
       </header>
 
       {/*Sección Body---------------------------------------------------------------------------------------------------------*/}
       <main className="flex-1">
-
         {/*Sección Sobre Mí--------------------------------------------------------------------------------------------------------*/}
         <section id="about" className="w-full py-20 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-2 items-center">
@@ -171,7 +222,7 @@ export function Principal() {
         {/*Sección Habilidades---------------------------------------------------------------------------------------------------------*/}
         <section
           id="skills"
-          className="w-full py-12 md:py-24 lg:py-32 bg-[#0b2845]"
+          className="w-full py-20 md:py-24 lg:py-32 bg-[#0b2845]"
         >
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -355,12 +406,11 @@ export function Principal() {
               {/*Looper de la sección de tecnologías*/}
               <Looper isSpanish={isSpanish} />
             </div>
-
           </div>
         </section>
 
         {/*Sección Proyectos---------------------------------------------------------------------------------------------------------*/}
-        <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="projects" className="w-full py-20 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
