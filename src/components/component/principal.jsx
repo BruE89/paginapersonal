@@ -12,7 +12,7 @@ import LogoLink from "./logolink";
 import Looper from "./looper"
 
 export function Principal() {
-  const [isSpanish, setIsSpanish] = useState(false);
+  const [isSpanish, setIsSpanish] = useState(true);
   const handleLanguageToggle = () => {
     setIsSpanish(!isSpanish);
   };
@@ -56,17 +56,13 @@ export function Principal() {
   return (
     // Fondo de seccion principal // Color de texto NavBar y boton de CV
     <div className="flex flex-col min-h-[100dvh] bg-[#294a6b] text-[#ffffff]">
+
       {/*Sección NavBar---------------------------------------------------------------------------------------------------------*/}
       <header className="fixed top-0 left-0 w-full px-4 lg:px-6 h-14 flex items-center bg-[#3d5a86] z-50">
         <div className="flex items-center gap-4">
-          {/* icono en desuso */}
-          {/*<Link href="#" className="flex items-center justify-center" prefetch={false}>*/}
-          {/*<MountainIcon className="h-6 w-6 text-white" />*/}
-          {/*<span className="sr-only">Bruno Estala</span>*/}
-          {/*</Link>*/}
+          {/*Botón LinkedIn*/}
           <Link
             href="https://www.linkedin.com/in/brunoestala/"
-            //Color de Hover boton Linkedin
             className="text-white hover:text-[#8b9297] transition-colors animate-fade-in-down"
             prefetch={false}
             target="_blank"
@@ -75,6 +71,7 @@ export function Principal() {
             <LinkedinIcon className="h-6 w-6" />
             <span className="sr-only">LinkedIn</span>
           </Link>
+          {/*Botón GitHub*/}
           <Link
             href="https://github.com/BruE89"
             //Color de Hover boton GitHub
@@ -86,6 +83,7 @@ export function Principal() {
             <GithubIcon className="h-6 w-6" />
             <span className="sr-only">GitHub</span>
           </Link>
+          {/*Botón Slack*/}
           <Link
             href="https://bruno-estala.slack.com"
             //Color de Hover boton Slack
@@ -97,9 +95,9 @@ export function Principal() {
             <SlackIcon className="h-6 w-6" />
             <span className="sr-only">Slack</span>
           </Link>
+          {/*Botón Traductor*/}
           <Button className="animate-fade-in-down"
             onClick={handleLanguageToggle}
-          //Color de fondo del boton traductor // Color de Hover del boton traductor
           >
             {isSpanish ? "Translate to English" : "Traducir al Español"}
           </Button>
@@ -139,9 +137,11 @@ export function Principal() {
         </nav>
       </header>
 
-      {/*Sección Principal---------------------------------------------------------------------------------------------------------*/}
+      {/*Sección Body---------------------------------------------------------------------------------------------------------*/}
       <main className="flex-1">
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+
+        {/*Sección Sobre Mí--------------------------------------------------------------------------------------------------------*/}
+        <section id="about" className="w-full py-20 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-2 items-center">
             <div className="text-center md:text-left">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-[#ffffff] animate-fade-in-left">
