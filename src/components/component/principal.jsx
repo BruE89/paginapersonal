@@ -192,16 +192,20 @@ export function Principal() {
       {/*Sección Body---------------------------------------------------------------------------------------------------------*/}
       <main className="flex-1">
         {/*Sección Sobre Mí--------------------------------------------------------------------------------------------------------*/}
-        <section id="about" className="w-full py-20 md:py-24 lg:py-32">
+        <section id="about" className="w-full pt-20 pb-10 md:pt-24 md:pb-10 lg:pt-40 lg:pb-10">
           <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-2 items-center">
             <div className="text-center md:text-left">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-[#ffffff] animate-fade-in-left">
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-[#ffffff] animate-fade-in-left mb-10">
                 {isSpanish ? "Hola, soy Bruno Estala" : "Hi, I'm Bruno Estala"}
               </h1>
-              <p className="text-[#ffffff] text-lg mt-4 animate-fade-in-right">
+              <p className="text-[#ffffff] text-lg mt-4 animate-fade-in-right whitespace-pre-line mb-10">
                 {isSpanish
-                  ? "Soy un desarrollador de React apasionado con una s\u00F3lida experiencia en JavaScript y Tailwind CSS. Me encanta crear aplicaciones web visualmente atractivas y f\u00E1ciles de usar."
-                  : "I'm a passionate React developer with a strong background in JavaScript and Tailwind CSS. I love creating visually appealing and user-friendly web applications."}
+                  ? `Soy un desarrollador Full Stack apasionado con una sólida experiencia en crear soluciones web innovadoras y eficientes.
+                      Con habilidades en tecnologías modernas, combino un enfoque detallista en el backend con una visión creativa en el frontend. 
+                      Siempre estoy listo para enfrentar nuevos desafíos y colaborar en equipos dinámicos para impulsar el éxito de proyectos tecnológicos.`
+                  : `I am a passionate Full Stack developer with solid experience in creating innovative and efficient web solutions. 
+                      With skills in modern technologies, I combine a detail-oriented approach in the backend with a creative vision in the frontend. 
+                      I am always ready to face new challenges and collaborate with dynamic teams to drive the success of technological projects.`}
               </p>
               <div className="mt-6 animate-fade-in-up">
                 <DownloadCV isSpanish={isSpanish} />
@@ -215,6 +219,25 @@ export function Principal() {
                 alt="Bruno Estala"
                 className="rounded-full"
               />
+            </div>
+          </div>
+          <div className="container mx-auto ml-4 md:px-6 flex mt-28">
+            <Image
+              src="/argentinaprograma.png"
+              width="50"
+              height="50"
+              alt="argentinaprograma"
+              className=""
+            />
+            <h3 className="ml-4 mt-2 font-mono font-bold text-xl text-[#ffffff7a]">Argentina Programa 4.0</h3>
+            <div>
+            <Image
+              src="/cessilogo.png"
+              width="120"
+              height="120"
+              alt="cessi"
+              className="ml-10"
+            />
             </div>
           </div>
         </section>
@@ -232,8 +255,8 @@ export function Principal() {
                 </h2>
                 <p className="max-w-[700px] text-[#6b7a8f] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {isSpanish
-                    ? "Tengo una amplia gama de habilidades en el desarrollo web, incluyendo React, JavaScript y Tailwind CSS."
-                    : "I have a wide range of skills in web development, including React, JavaScript, and Tailwind CSS."}
+                    ? "Tengo una amplia gama de habilidades en el desarrollo de software, incluyendo Java, JavaScript y React."
+                    : "I have a wide range of skills in software development, including Java, JavaScript, and React."}
                 </p>
               </div>
             </div>
@@ -314,7 +337,7 @@ export function Principal() {
                 </p>
               </div>
               <div className="grid gap-1">
-                <div className="flex items-end justify-center mb-4 h-40">
+                <div className="flex items-center justify-center pt-8 mb-4 h-40">
                   {/*REACT LOGO*/}
                   <LogoLink
                     logo={"/habilidades/reactlogo.png"}
@@ -384,7 +407,7 @@ export function Principal() {
                 </p>
               </div>
               <div className="grid gap-1">
-                <div className="flex items-end justify-center mb-4 h-40">
+                <div className="flex items-center justify-center pt-8 mb-4 h-40">
                   {/*TAILWIND LOGO*/}
                   <LogoLink
                     logo={"/habilidades/tailwindlogo.png"}
