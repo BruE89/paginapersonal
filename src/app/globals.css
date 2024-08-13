@@ -5,6 +5,13 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  padding-right: 0 !important;
+  overflow-y: visible !important;
+  background-color: rgb(0, 0, 0);
+}
+
+body {
+  overflow-y: hidden;
 }
 
 @layer utilities {

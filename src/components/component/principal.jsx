@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
+
 import DownloadCV from "./cv";
-import Image from "next/image";
 import LogoLink from "./logolink";
 import Looper from "./looper";
 
-import { Fragment } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -59,7 +59,7 @@ export function Principal() {
 
   return (
     // Fondo de seccion principal // Color de texto NavBar y boton de CV
-    <div className="flex flex-col min-h-[100dvh] bg-[#294a6b] text-[#ffffff]">
+    <div className="flex flex-col min-h-[100vh] bg-[#294a6b] text-[#ffffff]">
       {/*Sección NavBar---------------------------------------------------------------------------------------------------------*/}
       <header className="fixed top-0 left-0 w-full px-4 lg:px-6 h-14 flex items-center bg-[#3d5a86] z-50 ">
         <div className="flex items-center gap-4">
@@ -216,6 +216,7 @@ export function Principal() {
                 src="/placeholder.svg"
                 width="300"
                 height="300"
+                priority
                 alt="Bruno Estala"
                 className="rounded-full"
               />
@@ -224,17 +225,18 @@ export function Principal() {
           <div className="container mx-auto ml-4 md:px-6 flex mt-28">
             <Image
               src="/argentinaprograma.png"
-              width="50"
-              height="50"
+              width={50}
+              height={41}
               alt="argentinaprograma"
-              className=""
+              loading="lazy"
+              className="object-contain"
             />
             <h3 className="ml-4 mt-2 font-mono font-bold text-xl text-[#ffffff7a]">Argentina Programa 4.0</h3>
             <div>
             <Image
               src="/cessilogo.png"
-              width="120"
-              height="120"
+              width={120}
+              height={41}
               alt="cessi"
               className="ml-10"
             />
@@ -267,10 +269,10 @@ export function Principal() {
                   {/*LOGO JAVA" />*/}
                   <LogoLink
                     logo={"/habilidades/javalogo.png"}
-                    linkesp={
+                    linkEsp={
                       "https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)"
                     }
-                    linking={
+                    linkIng={
                       "https://en.wikipedia.org/wiki/Java_(programming_language)"
                     }
                     isSpanish={isSpanish}
@@ -288,8 +290,8 @@ export function Principal() {
                   {/*MYSQL LOGO*/}
                   <LogoLink
                     logo={"/habilidades/mysqllogo.png"}
-                    linkesp={"https://es.wikipedia.org/wiki/MySQL"}
-                    linking={"https://en.wikipedia.org/wiki/MySQL"}
+                    linkEsp={"https://es.wikipedia.org/wiki/MySQL"}
+                    linkIng={"https://en.wikipedia.org/wiki/MySQL"}
                     isSpanish={isSpanish}
                   ></LogoLink>
                 </div>
@@ -305,8 +307,8 @@ export function Principal() {
                   {/*SPRING LOGO*/}
                   <LogoLink
                     logo={"/habilidades/springbootlogo.png"}
-                    linkesp={"https://es.wikipedia.org/wiki/Spring_Framework"}
-                    linking={"https://en.wikipedia.org/wiki/Spring_Framework"}
+                    linkEsp={"https://es.wikipedia.org/wiki/Spring_Framework"}
+                    linkIng={"https://en.wikipedia.org/wiki/Spring_Framework"}
                     isSpanish={isSpanish}
                   ></LogoLink>
                 </div>
@@ -324,8 +326,8 @@ export function Principal() {
                   {/*JAVASCRIPT LOGO*/}
                   <LogoLink
                     logo={"/habilidades/jslogo.png"}
-                    linkesp={"https://es.wikipedia.org/wiki/JavaScript"}
-                    linking={"https://en.wikipedia.org/wiki/JavaScript"}
+                    linkEsp={"https://es.wikipedia.org/wiki/JavaScript"}
+                    linkIng={"https://en.wikipedia.org/wiki/JavaScript"}
                     isSpanish={isSpanish}
                   ></LogoLink>
                 </div>
@@ -341,8 +343,8 @@ export function Principal() {
                   {/*REACT LOGO*/}
                   <LogoLink
                     logo={"/habilidades/reactlogo.png"}
-                    linkesp={"https://es.wikipedia.org/wiki/React"}
-                    linking={
+                    linkEsp={"https://es.wikipedia.org/wiki/React"}
+                    linkIng={
                       "https://en.wikipedia.org/wiki/React_(JavaScript_library)"
                     }
                     isSpanish={isSpanish}
@@ -360,8 +362,8 @@ export function Principal() {
                   {/*NODEJS LOGO*/}
                   <LogoLink
                     logo={"/habilidades/nodelogo.png"}
-                    linkesp={"https://es.wikipedia.org/wiki/Node.js"}
-                    linking={"https://en.wikipedia.org/wiki/Node.js"}
+                    linkEsp={"https://es.wikipedia.org/wiki/Node.js"}
+                    linkIng={"https://en.wikipedia.org/wiki/Node.js"}
                     isSpanish={isSpanish}
                   ></LogoLink>
                 </div>
@@ -377,8 +379,8 @@ export function Principal() {
                   {/*HTML LOGO*/}
                   <LogoLink
                     logo={"/habilidades/htmllogo.png"}
-                    linkesp={"https://es.wikipedia.org/wiki/HTML"}
-                    linking={"https://en.wikipedia.org/wiki/HTML"}
+                    linkEsp={"https://es.wikipedia.org/wiki/HTML"}
+                    linkIng={"https://en.wikipedia.org/wiki/HTML"}
                     isSpanish={isSpanish}
                   ></LogoLink>
                 </div>
@@ -394,8 +396,8 @@ export function Principal() {
                   {/*CSS LOGO*/}
                   <LogoLink
                     logo={"/habilidades/csslogo.png"}
-                    linkesp={"https://es.wikipedia.org/wiki/CSS"}
-                    linking={"https://en.wikipedia.org/wiki/CSS"}
+                    linkEsp={"https://es.wikipedia.org/wiki/CSS"}
+                    linkIng={"https://en.wikipedia.org/wiki/CSS"}
                     isSpanish={isSpanish}
                   ></LogoLink>
                 </div>
@@ -411,8 +413,8 @@ export function Principal() {
                   {/*TAILWIND LOGO*/}
                   <LogoLink
                     logo={"/habilidades/tailwindlogo.png"}
-                    linkesp={"https://es.wikipedia.org/wiki/Tailwind_CSS"}
-                    linking={"https://en.wikipedia.org/wiki/Tailwind_CSS"}
+                    linkEsp={"https://es.wikipedia.org/wiki/Tailwind_CSS"}
+                    linkIng={"https://en.wikipedia.org/wiki/Tailwind_CSS"}
                     isSpanish={isSpanish}
                   ></LogoLink>
                 </div>

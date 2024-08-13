@@ -1,16 +1,16 @@
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const LogoLink = ({ logo, linkesp, linking, isSpanish }) => {
+const LogoLink = ({ logo, linkEsp, linkIng, isSpanish }) => {
   return (
-    <Link href={isSpanish ? linkesp : linking} target="_blank" passHref>
+    <Link href={isSpanish ? linkEsp : linkIng} target="_blank" passHref>
       <Image
         src={logo}
         width={100}
         height={100}
         alt="logo"
-        className="transition-transform transform hover:scale-125 mb-4"
+        loading="lazy"
+        className="transition-transform transform hover:scale-125 mb-4 "
       />
     </Link>
   );
