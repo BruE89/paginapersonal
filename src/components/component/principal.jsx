@@ -548,13 +548,13 @@ export function Principal() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center shadow-2xl">
+              <div className="flex justify-center">
                 <Image
                   src="/tareasapp.png"
                   width="550"
                   height="310"
                   alt="Todo App"
-                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full brightness-95"
                 />
               </div>
             </div>
@@ -581,9 +581,7 @@ export function Principal() {
               <div className="mx-auto w-full max-w-sm space-y-2">
                 <form 
                   onSubmit={handleSubmit} 
-                  className="flex flex-col gap-2"
-                  data-netlify-recaptcha="true"
-                  data-netlify="true">
+                  className="flex flex-col gap-2">
                   <Input
                     type="text"
                     name="name"
@@ -609,10 +607,6 @@ export function Principal() {
                     placeholder={isSpanish ? "Mensaje" : "Message"}
                     className="max-w-lg flex-1 text-[#000000]"
                   />
-
-                  {/*CAPTCHA*/}
-                  <div data-netlify-recaptcha="true"/>
-
                   <Button
                     type="submit"
                     className="bg-[#4b6a9b] text-white hover:bg-[#3d5a86] w-full"
