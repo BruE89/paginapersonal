@@ -455,15 +455,8 @@ export function Principal() {
                       : "An App developed using Java, SQL and Spring. It manages HTTP requests and stores information on a database through an API"}
                   </p>
                   <div className="flex gap-2">
-                    {/*<Link
-                      href="#"
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white shadow transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                      prefetch={false}
-                    >
-                      {isSpanish ? "Demo en vivo" : "Live Demo"}
-                    </Link>*/}
                     <Link
-                      href="#"
+                      href="https://github.com/BruE89/vetapp"
                       className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
@@ -472,7 +465,7 @@ export function Principal() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center shadow-2xl">
                 <Image
                   src="/spring_app.png"
                   width="550"
@@ -555,7 +548,7 @@ export function Principal() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center shadow-2xl">
                 <Image
                   src="/tareasapp.png"
                   width="550"
@@ -616,7 +609,7 @@ export function Principal() {
                     placeholder={isSpanish ? "Mensaje" : "Message"}
                     className="max-w-lg flex-1 text-[#000000]"
                   />
-                  
+
                   {/*CAPTCHA*/}
                   <div data-netlify-recaptcha="true"/>
 

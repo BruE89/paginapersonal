@@ -13,6 +13,7 @@ const LogoRow = () =>(
   <Image className="mx-8 inline h-32" height={100} width={130} src="/looper/nextlogo.png" alt="next" />
   <Image className="mx-8 inline h-32" height={100} width={350} src="/looper/postmanlogo.png" alt="postman" />
   <Image className="mx-8 inline h-32" height={100} width={150} src="/looper/phplogo.png" alt="php" />
+  <Image className="mx-8 inline h-32" height={100} width={150} src="/looper/dockerlogo.png" alt="docker" />
   <Image className="mx-8 inline h-32" height={100} width={225} src="/looper/vslogo.png" alt="vs" />
   <Image className="mx-8 inline h-32" height={100} width={200} src="/looper/netbeanslogo.png" alt="netbeans" />
   </div>
