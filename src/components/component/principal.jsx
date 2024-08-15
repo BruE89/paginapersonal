@@ -457,6 +457,8 @@ export function Principal() {
                   <div className="flex gap-2">
                     <Link
                       href="https://github.com/BruE89/vetapp"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
@@ -477,7 +479,7 @@ export function Principal() {
             </div>
             {/*Contenedor 2*/}
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <div className="flex justify-center">
+              <div className="flex justify-center shadow-2xl">
                 <Image
                   src="/weather_app.png"
                   width="550"
@@ -489,7 +491,7 @@ export function Principal() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-4">
                   <h3 className="font-bold text-[#7291be] text-3xl">
-                    Weather App
+                    Weather App (próximamente)
                   </h3>
                   <p className="text-[#ffffff]">
                     {isSpanish
@@ -557,6 +559,51 @@ export function Principal() {
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full brightness-95"
                 />
               </div>
+            </div>
+            {/*Contenedor 4*/}
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+              <div className="flex justify-center shadow-2xl">
+                <Image
+                  src="/ahorcado.png"
+                  width="550"
+                  height="310"
+                  alt="Weather App"
+                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                />
+              </div>
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="grid gap-4">
+                  <h3 className="font-bold text-[#7291be] text-3xl">
+                    Ahorcado
+                  </h3>
+                  <p className="text-[#ffffff]">
+                    {isSpanish
+                      ? "Juego simple de adivinar la palabra secreta, en español, desarrollado con TypeScript, React y Vite"
+                      : "Simple guess-the-word game, in spanish only, developed using TypeScript, React and Vite"}
+                  </p>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://ahorcadoappgame.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white shadow transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      {isSpanish ? "Demo en vivo" : "Live Demo"}
+                    </Link>
+                    <Link
+                      href="https://github.com/BruE89/ahorcadoapp"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      GitHub
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
             </div>
           </div>
         </section>
