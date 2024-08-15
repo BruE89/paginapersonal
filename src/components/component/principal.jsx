@@ -47,11 +47,6 @@ export function Principal() {
       }
     } catch (error) {
       console.error("Error sending email:", {
-        // codigo para mostrar errores:
-        message: error.message,
-        response: error.response ? error.response.data : null,
-        stack: error.stack,
-        //----------------------------------------------------
       });
       alert(isSpanish ? "Error al enviar el correo" : "Error sending email");
     }
@@ -456,17 +451,17 @@ export function Principal() {
                   <h3 className="font-bold text-[#7291be] text-3xl">Vet App</h3>
                   <p className="text-[#ffffff]">
                     {isSpanish
-                      ? "Una aplicación desarrollada con Java, SQL y Spring. Guarda información en una base de datos mediante una API"
-                      : "App developed with Java, SQL and Spring. It stores information on a database through an API"}
+                      ? "Una aplicación desarrollada con Java, SQL y Spring. Maneja pedidos HTTP y guarda información en una base de datos mediante una API"
+                      : "An App developed using Java, SQL and Spring. It manages HTTP requests and stores information on a database through an API"}
                   </p>
                   <div className="flex gap-2">
-                    <Link
+                    {/*<Link
                       href="#"
                       className="inline-flex h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white shadow transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       {isSpanish ? "Demo en vivo" : "Live Demo"}
-                    </Link>
+                    </Link>*/}
                     <Link
                       href="#"
                       className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
@@ -505,8 +500,8 @@ export function Principal() {
                   </h3>
                   <p className="text-[#ffffff]">
                     {isSpanish
-                      ? "Una aplicaci\u00F3n de clima receptiva que muestra datos meteorol\u00F3gicos en tiempo real utilizando una API de clima."
-                      : "A responsive weather application that displays real-time weather data using a weather API."}
+                      ? "Una aplicaci\u00F3n de clima receptiva que muestra datos meteorol\u00F3gicos en tiempo real utilizando una API de clima"
+                      : "A responsive weather application that displays real-time weather data using a weather API"}
                   </p>
                   <div className="flex gap-2">
                     <Link
@@ -591,7 +586,11 @@ export function Principal() {
                 </p>
               </div>
               <div className="mx-auto w-full max-w-sm space-y-2">
-                <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+                <form 
+                  onSubmit={handleSubmit} 
+                  className="flex flex-col gap-2"
+                  data-netlify-recaptcha="true"
+                  data-netlify="true">
                   <Input
                     type="text"
                     name="name"
@@ -617,6 +616,10 @@ export function Principal() {
                     placeholder={isSpanish ? "Mensaje" : "Message"}
                     className="max-w-lg flex-1 text-[#000000]"
                   />
+                  
+                  {/*CAPTCHA*/}
+                  <div data-netlify-recaptcha="true"/>
+
                   <Button
                     type="submit"
                     className="bg-[#4b6a9b] text-white hover:bg-[#3d5a86] w-full"
