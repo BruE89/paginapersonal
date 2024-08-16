@@ -55,7 +55,7 @@ export function Principal() {
   return (
     // Fondo de seccion principal // Color de texto NavBar y boton de CV
     <div className="flex flex-col min-h-[100vh] bg-[#294a6b] text-[#ffffff]">
-      {/*Sección NavBar---------------------------------------------------------------------------------------------------------*/}
+      {/*Sección NavBar-------------------------------------------------------------------------------------------------------------*/}
       <header className="fixed top-0 left-0 w-full px-4 lg:px-6 h-14 flex items-center bg-[#3d5a86] z-50 ">
         <div className="flex items-center gap-4">
           {/*Botón LinkedIn*/}
@@ -184,9 +184,9 @@ export function Principal() {
         </nav>
       </header>
 
-      {/*Sección Body---------------------------------------------------------------------------------------------------------*/}
+      {/*Sección Body---------------------------------------------------------------------------------------------------------------*/}
       <main className="flex-1">
-        {/*Sección Sobre Mí--------------------------------------------------------------------------------------------------------*/}
+        {/*Sección Sobre Mí---------------------------------------------------------------------------------------------------------*/}
         <section id="about" className="w-full pt-20 pb-10 md:pt-24 md:pb-10 lg:pt-40 lg:pb-10">
           <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-2 items-center">
             <div className="text-center md:text-left">
@@ -239,7 +239,7 @@ export function Principal() {
           </div>
         </section>
 
-        {/*Sección Habilidades---------------------------------------------------------------------------------------------------------*/}
+        {/*Sección Habilidades------------------------------------------------------------------------------------------------------*/}
         <section
           id="skills"
           className="w-full py-20 md:py-24 lg:py-32 bg-[#0b2845]"
@@ -429,7 +429,7 @@ export function Principal() {
           </div>
         </section>
 
-        {/*Sección Proyectos---------------------------------------------------------------------------------------------------------*/}
+        {/*Sección Proyectos--------------------------------------------------------------------------------------------------------*/}
         <section id="projects" className="w-full py-20 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -626,7 +626,8 @@ export function Principal() {
                 </p>
               </div>
               <div className="mx-auto w-full max-w-sm space-y-2">
-                <form 
+                <form
+                  data-netlify-recaptcha="true" 
                   onSubmit={handleSubmit} 
                   className="flex flex-col gap-2">
                   <Input
@@ -660,6 +661,7 @@ export function Principal() {
                   >
                     {isSpanish ? "Enviar" : "Submit"}
                   </Button>
+                  <div data-netlify-recaptcha="true" />
                 </form>
               </div>
             </div>
@@ -667,7 +669,7 @@ export function Principal() {
         </section>
       </main>
 
-      {/*Sección Footer---------------------------------------------------------------------------------------------------------*/}
+      {/*Sección Footer-------------------------------------------------------------------------------------------------------------*/}
       <footer className="bg-[#3d5a86] text-white py-4">
         <div className="container mx-auto text-center">
           <p>
