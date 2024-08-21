@@ -481,7 +481,7 @@ export function Principal() {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex justify-center shadow-2xl">
                 <Image
-                  src="/weather_app.png"
+                  src="/presupuesto.png"
                   width="550"
                   height="310"
                   alt="Weather App"
@@ -491,23 +491,25 @@ export function Principal() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-4">
                   <h3 className="font-bold text-[#7291be] text-3xl">
-                    Weather App (próximamente)
+                    Presupuestos App
                   </h3>
                   <p className="text-[#ffffff]">
                     {isSpanish
-                      ? "Una aplicaci\u00F3n de clima receptiva que muestra datos meteorol\u00F3gicos en tiempo real utilizando una API de clima"
-                      : "A responsive weather application that displays real-time weather data using a weather API"}
+                      ? "Aplicación encargada de llevar un seguimiento de presupuestos, límites, categorías, gastos y descripciones"
+                      : "An application responsible for tracking budgets, limits, categories, expenses, and descriptions."}
                   </p>
                   <div className="flex gap-2">
                     <Link
-                      href="#"
+                      href="https://presupuestosb.netlify.app/"
+                      target="_blank"
                       className="inline-flex h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white shadow transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       {isSpanish ? "Demo en vivo" : "Live Demo"}
                     </Link>
                     <Link
-                      href="#"
+                      href="https://github.com/BruE89/presupuestoapp"
+                      target="_blank"
                       className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
@@ -604,6 +606,39 @@ export function Principal() {
                 </div>
               </div>
               
+            </div>
+            {/*Contenedor 5*/}
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="grid gap-4 justify-center">
+                  <h3 className="font-bold text-[#7291be] text-3xl">Mis Ejercicios</h3>
+                  <p className="text-[#ffffff]">
+                    {isSpanish
+                      ? "Biblioteca de ejercicios varios, realizados durante las clases de Argentina Programa 4.0"
+                      : "Library of various exercises, completed during the Argentina Programa 4.0 classes"}
+                  </p>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://github.com/BruE89/Ejercicios"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      GitHub
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-center shadow-2xl">
+                <Image
+                  src="/ejercicios.png"
+                  width="550"
+                  height="310"
+                  alt="Todo App"
+                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full brightness-95"
+                />
+              </div>
             </div>
           </div>
         </section>
