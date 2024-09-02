@@ -8,6 +8,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
 
+import { FaSlack as SlackIcon, FaGithub as GithubIcon,
+   FaLinkedin as LinkedinIcon, FaWhatsapp as WhatsappIcon } from 'react-icons/fa';
 import DownloadCV from "./cv";
 import LogoLink from "./logolink";
 import Looper from "./looper";
@@ -66,7 +68,7 @@ export function Principal() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedinIcon className="h-6 w-6" />
+            <LinkedinIcon className="h-8 w-8" />
             <span className="sr-only">LinkedIn</span>
           </Link>
           {/*Botón GitHub*/}
@@ -78,7 +80,7 @@ export function Principal() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GithubIcon className="h-6 w-6" />
+            <GithubIcon className="h-8 w-8" />
             <span className="sr-only">GitHub</span>
           </Link>
           {/*Botón Slack*/}
@@ -90,8 +92,19 @@ export function Principal() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SlackIcon className="h-6 w-6" />
+            <SlackIcon className="h-8 w-8" />
             <span className="sr-only">Slack</span>
+          </Link>
+          {/*Botón Whatsapp*/}
+          <Link
+            href="https://wa.me/541154963756?text=Hola%20Bruno!"
+            className="text-white hover:text-[#8b9297] transition-colors animate-fade-in-down"
+            prefetch={false}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <WhatsappIcon className="h-8 w-8" />
+            <span className="sr-only">WhatsApp</span>
           </Link>
           {/*Botón Traductor*/}
           <Button
@@ -187,7 +200,10 @@ export function Principal() {
       {/*Sección Body---------------------------------------------------------------------------------------------------------------*/}
       <main className="flex-1">
         {/*Sección Sobre Mí---------------------------------------------------------------------------------------------------------*/}
-        <section id="about" className="w-full pt-20 pb-10 md:pt-24 md:pb-10 lg:pt-40 lg:pb-10">
+        <section
+          id="about"
+          className="w-full pt-20 pb-10 md:pt-24 md:pb-10 lg:pt-40 lg:pb-10"
+        >
           <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-2 items-center">
             <div className="text-center md:text-left">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-[#ffffff] animate-fade-in-left mb-10">
@@ -226,15 +242,17 @@ export function Principal() {
               loading="lazy"
               className="object-contain"
             />
-            <h3 className="ml-4 mt-2 font-mono font-bold text-xl text-[#ffffff7a]">Argentina Programa 4.0</h3>
+            <h3 className="ml-4 mt-2 font-mono font-bold text-xl text-[#ffffff7a]">
+              Argentina Programa 4.0
+            </h3>
             <div>
-            <Image
-              src="/cessilogo.png"
-              width={120}
-              height={41}
-              alt="cessi"
-              className="ml-10"
-            />
+              <Image
+                src="/cessilogo.png"
+                width={120}
+                height={41}
+                alt="cessi"
+                className="ml-10"
+              />
             </div>
           </div>
         </section>
@@ -459,7 +477,7 @@ export function Principal() {
                       href="https://github.com/BruE89/vetapp"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex shadow-md h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       GitHub
@@ -502,7 +520,7 @@ export function Principal() {
                     <Link
                       href="https://presupuestosb.netlify.app/"
                       target="_blank"
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white shadow transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex shadow-md h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       {isSpanish ? "Demo en vivo" : "Live Demo"}
@@ -510,7 +528,7 @@ export function Principal() {
                     <Link
                       href="https://github.com/BruE89/presupuestoapp"
                       target="_blank"
-                      className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex shadow-md h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       GitHub
@@ -518,13 +536,14 @@ export function Principal() {
                   </div>
                 </div>
               </div>
-              
             </div>
             {/*Contenedor 3*/}
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-4 justify-center">
-                  <h3 className="font-bold text-[#7291be] text-3xl">Tareas App</h3>
+                  <h3 className="font-bold text-[#7291be] text-3xl">
+                    Tareas App
+                  </h3>
                   <p className="text-[#ffffff]">
                     {isSpanish
                       ? "Lista de tareas interactiva, desarrollada con JavaScript, React y Vite"
@@ -535,7 +554,7 @@ export function Principal() {
                       href="https://listatareasbruno.netlify.app/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white shadow transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex shadow-md h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       {isSpanish ? "Demo en vivo" : "Live Demo"}
@@ -544,7 +563,7 @@ export function Principal() {
                       href="https://github.com/BruE89/tareasapp"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex shadow-md h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       GitHub
@@ -588,7 +607,7 @@ export function Principal() {
                       href="https://ahorcadoappgame.netlify.app/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white shadow transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex shadow-md h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       {isSpanish ? "Demo en vivo" : "Live Demo"}
@@ -597,7 +616,7 @@ export function Principal() {
                       href="https://github.com/BruE89/ahorcadoapp"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex shadow-md h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       GitHub
@@ -605,13 +624,14 @@ export function Principal() {
                   </div>
                 </div>
               </div>
-              
             </div>
             {/*Contenedor 5*/}
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-4 justify-center">
-                  <h3 className="font-bold text-[#7291be] text-3xl">Mis Ejercicios</h3>
+                  <h3 className="font-bold text-[#7291be] text-3xl">
+                    Mis Ejercicios
+                  </h3>
                   <p className="text-[#ffffff]">
                     {isSpanish
                       ? "Biblioteca de ejercicios varios, realizados durante las clases de Argentina Programa 4.0"
@@ -622,7 +642,7 @@ export function Principal() {
                       href="https://github.com/BruE89/Ejercicios"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium shadow-sm transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex shadow-md h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       GitHub
@@ -662,9 +682,10 @@ export function Principal() {
               </div>
               <div className="mx-auto w-full max-w-sm space-y-2">
                 <form
-                  data-netlify-recaptcha="true" 
-                  onSubmit={handleSubmit} 
-                  className="flex flex-col gap-2">
+                  data-netlify-recaptcha="true"
+                  onSubmit={handleSubmit}
+                  className="flex flex-col gap-2"
+                >
                   <Input
                     type="text"
                     name="name"
@@ -716,98 +737,5 @@ export function Principal() {
         </div>
       </footer>
     </div>
-  );
-}
-
-//----------------------------------------------------------------------------------------------------------------------//
-
-// icono de github
-function GithubIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-      <path d="M9 18c-4.51 2-5-2-7-2" />
-    </svg>
-  );
-}
-
-// icono de linkedin
-function LinkedinIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect width="4" height="12" x="2" y="9" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  );
-}
-
-// icono de slack
-function SlackIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="3" height="8" x="13" y="2" rx="1.5" />
-      <path d="M19 8.5V10h1.5A1.5 1.5 0 1 0 19 8.5" />
-      <rect width="3" height="8" x="8" y="14" rx="1.5" />
-      <path d="M5 15.5V14H3.5A1.5 1.5 0 1 0 5 15.5" />
-      <rect width="8" height="3" x="14" y="13" rx="1.5" />
-      <path d="M15.5 19H14v1.5a1.5 1.5 0 1 0 1.5-1.5" />
-      <rect width="8" height="3" x="2" y="8" rx="1.5" />
-      <path d="M8.5 5H10V3.5A1.5 1.5 0 1 0 8.5 5" />
-    </svg>
-  );
-}
-
-// propiedades de los iconos
-function XIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
   );
 }

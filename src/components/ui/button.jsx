@@ -11,7 +11,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "ml-auto bg-[#4b6a9b] text-white hover:bg-[#0b2845]", //Default: bg-primary text-primary-foreground hover:bg-primary/90
+        default: "ml-auto bg-[#4b6a9b] shadow-md text-white bg-gradient-to-r from-[#4b6a9b] to-[#294a6b] hover:from-[#0b2845] hover:to-[#0b2845]", //Default: ml-auto bg-[#4b6a9b] text-white hover:bg-[#0b2845]
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
