@@ -7,8 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "custom-blue" : "#294a6b"
+      },
       animation: ['hover'],
       backgroundImage: {
+        'custom-gradient': 'linear-gradient(135deg, #294a6b 40%, #5D7D9E 80%)',
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

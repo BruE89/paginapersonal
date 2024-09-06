@@ -203,7 +203,7 @@ export function Principal() {
         {/*Sección Sobre Mí---------------------------------------------------------------------------------------------------------*/}
         <section
           id="about"
-          className="w-full pt-20 pb-10 md:pt-24 md:pb-10 lg:pt-40 lg:pb-10"
+          className="bg-custom-gradient w-full pt-20 pb-10 md:pt-24 md:pb-10 lg:pt-40 lg:pb-10"
         >
           <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-2 items-center">
             <div className="text-center md:text-left">
@@ -262,7 +262,7 @@ export function Principal() {
           id="skills"
           className="relative w-full py-20 md:py-24 lg:py-32 bg-[#0b2845]">
           <ParticleBackground/>
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="relative container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#7291be]">
@@ -276,7 +276,7 @@ export function Principal() {
               </div>
             </div>
             {/*contenedor principal de la sección de logos*/}
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12 text-center">
+            <div className="relative mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12 text-center">
               <div className="grid gap-1">
                 <div className="flex items-end justify-center mb-4 h-40">
                   {/*LOGO JAVA" />*/}
