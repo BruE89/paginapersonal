@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
+import ParticleBackground from "@/components/component/particles";
 
 import { FaSlack as SlackIcon, FaGithub as GithubIcon,
    FaLinkedin as LinkedinIcon, FaWhatsapp as WhatsappIcon } from 'react-icons/fa';
@@ -15,7 +16,7 @@ import LogoLink from "./logolink";
 import Looper from "./looper";
 
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
 export function Principal() {
   const [isSpanish, setIsSpanish] = useState(true);
@@ -256,12 +257,11 @@ export function Principal() {
             </div>
           </div>
         </section>
-
         {/*Sección Habilidades------------------------------------------------------------------------------------------------------*/}
         <section
           id="skills"
-          className="w-full py-20 md:py-24 lg:py-32 bg-[#0b2845]"
-        >
+          className="relative w-full py-20 md:py-24 lg:py-32 bg-[#0b2845]">
+          <ParticleBackground/>
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -440,13 +440,12 @@ export function Principal() {
               </div>
             </div>
 
-            <div>
+            <div className="relative">
               {/*Looper de la sección de tecnologías*/}
               <Looper isSpanish={isSpanish} />
             </div>
           </div>
         </section>
-
         {/*Sección Proyectos--------------------------------------------------------------------------------------------------------*/}
         <section id="projects" className="w-full py-20 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
@@ -662,7 +661,6 @@ export function Principal() {
             </div>
           </div>
         </section>
-
         {/*Sección Contacto---------------------------------------------------------------------------------------------------------*/}
         <section
           id="contact"
