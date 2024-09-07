@@ -1,5 +1,3 @@
-import React from 'react';
-
 const DownloadCV = ({ isSpanish }) => {
   return (
     <a

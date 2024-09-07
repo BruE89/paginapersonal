@@ -8,11 +8,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
 import ParticleBackground from "@/components/component/particles";
+import SkillCard from "./skillcard";
 
 import { FaSlack as SlackIcon, FaGithub as GithubIcon,
    FaLinkedin as LinkedinIcon, FaWhatsapp as WhatsappIcon } from 'react-icons/fa';
 import DownloadCV from "./cv";
-import LogoLink from "./logolink";
 import Looper from "./looper";
 
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
@@ -260,15 +260,16 @@ export function Principal() {
         {/*Sección Habilidades------------------------------------------------------------------------------------------------------*/}
         <section
           id="skills"
-          className="relative w-full py-20 md:py-24 lg:py-32 bg-[#0b2845]">
-          <ParticleBackground/>
+          className="relative w-full py-20 md:py-24 lg:py-32 bg-[#0b2845]"
+        >
+          <ParticleBackground />
           <div className="relative container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#7291be]">
                   {isSpanish ? "Mis Habilidades" : "My Skills"}
                 </h2>
-                <p className="max-w-[700px] text-[#6b7a8f] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[700px] text-[#9dacc0] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {isSpanish
                     ? "Tengo una amplia gama de habilidades en el desarrollo de software, incluyendo Java, JavaScript y React."
                     : "I have a wide range of skills in software development, including Java, JavaScript, and React."}
@@ -277,171 +278,117 @@ export function Principal() {
             </div>
             {/*contenedor principal de la sección de logos*/}
             <div className="relative mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12 text-center">
-              <div className="grid gap-1">
-                <div className="flex items-end justify-center mb-4 h-40">
-                  {/*LOGO JAVA" />*/}
-                  <LogoLink
-                    logo={"/habilidades/javalogo.png"}
-                    linkEsp={
-                      "https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)"
-                    }
-                    linkIng={
-                      "https://en.wikipedia.org/wiki/Java_(programming_language)"
-                    }
-                    isSpanish={isSpanish}
-                  ></LogoLink>
-                </div>
-                <h3 className="text-xl font-bold text-[#7291be]">Java</h3>
-                <p className="text-[#6b7a8f] h-32">
-                  {isSpanish
+              <SkillCard
+                logo="/habilidades/javalogo.png"
+                linkEsp="https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)"
+                linkIng="https://en.wikipedia.org/wiki/Java_(programming_language)"
+                isSpanish={isSpanish}
+                title="Java"
+                description={
+                  isSpanish
                     ? "He desarrollado aplicaciones backend robustas y escalables utilizando Java, aplicando conceptos de programación orientada a objetos y patrones de diseño."
-                    : "I have developed robust and scalable backend applications using Java, applying object-oriented programming concepts and design patterns."}
-                </p>
-              </div>
-              <div className="grid gap-1">
-                <div className="flex items-end justify-center mb-4 h-40">
-                  {/*MYSQL LOGO*/}
-                  <LogoLink
-                    logo={"/habilidades/mysqllogo.png"}
-                    linkEsp={"https://es.wikipedia.org/wiki/MySQL"}
-                    linkIng={"https://en.wikipedia.org/wiki/MySQL"}
-                    isSpanish={isSpanish}
-                  ></LogoLink>
-                </div>
-                <h3 className="text-xl font-bold text-[#7291be]">MySQL</h3>
-                <p className="text-[#6b7a8f] h-32">
-                  {isSpanish
+                    : "I have developed robust and scalable backend applications using Java, applying object-oriented programming concepts and design patterns."
+                }
+              />
+              <SkillCard
+                logo="/habilidades/mysqllogo.png"
+                linkEsp="https://es.wikipedia.org/wiki/MySQL"
+                linkIng="https://en.wikipedia.org/wiki/MySQL"
+                isSpanish={isSpanish}
+                title="MySQL"
+                description={
+                  isSpanish
                     ? "He gestionado bases de datos relacionales con MySQL, realizando consultas complejas y optimizando el rendimiento de las mismas."
-                    : "I have managed relational databases with MySQL, performing complex queries and optimizing their performance."}
-                </p>
-              </div>
-              <div className="grid gap-1">
-                <div className="flex items-end justify-center mb-4 h-40">
-                  {/*SPRING LOGO*/}
-                  <LogoLink
-                    logo={"/habilidades/springbootlogo.png"}
-                    linkEsp={"https://es.wikipedia.org/wiki/Spring_Framework"}
-                    linkIng={"https://en.wikipedia.org/wiki/Spring_Framework"}
-                    isSpanish={isSpanish}
-                  ></LogoLink>
-                </div>
-                <h3 className="text-xl font-bold text-[#7291be]">
-                  Spring Boot
-                </h3>
-                <p className="text-[#6b7a8f] h-32">
-                  {isSpanish
+                    : "I have managed relational databases with MySQL, performing complex queries and optimizing their performance."
+                }
+              />
+              <SkillCard
+                logo="/habilidades/springbootlogo.png"
+                linkEsp="https://es.wikipedia.org/wiki/Spring_Framework"
+                linkIng="https://en.wikipedia.org/wiki/Spring_Framework"
+                isSpanish={isSpanish}
+                title="Spring Boot"
+                description={
+                  isSpanish
                     ? "He desarrollado microservicios y APIs RESTful con Spring Boot, integrando soluciones de seguridad y manejo de datos."
-                    : "I have developed microservices and RESTful APIs with Spring Boot, integrating security solutions and data handling."}
-                </p>
-              </div>
-              <div className="grid gap-1">
-                <div className="flex items-end justify-center mb-4 h-40">
-                  {/*JAVASCRIPT LOGO*/}
-                  <LogoLink
-                    logo={"/habilidades/jslogo.png"}
-                    linkEsp={"https://es.wikipedia.org/wiki/JavaScript"}
-                    linkIng={"https://en.wikipedia.org/wiki/JavaScript"}
-                    isSpanish={isSpanish}
-                  ></LogoLink>
-                </div>
-                <h3 className="text-xl font-bold text-[#7291be]">JavaScript</h3>
-                <p className="text-[#6b7a8f] h-32">
-                  {isSpanish
+                    : "I have developed microservices and RESTful APIs with Spring Boot, integrating security solutions and data handling."
+                }
+              />
+              <SkillCard
+                logo="/habilidades/jslogo.png"
+                linkEsp="https://es.wikipedia.org/wiki/JavaScript"
+                linkIng="https://en.wikipedia.org/wiki/JavaScript"
+                isSpanish={isSpanish}
+                title="JavaScript"
+                description={
+                  isSpanish
                     ? "He creado aplicaciones frontend interactivas y dinámicas con JavaScript, manejando funcionalidades asíncronas y manipulación del DOM."
-                    : "I have created interactive and dynamic frontend applications with JavaScript, handling asynchronous functionalities and DOM manipulation."}
-                </p>
-              </div>
-              <div className="grid gap-1">
-                <div className="flex items-center justify-center pt-8 mb-4 h-40">
-                  {/*REACT LOGO*/}
-                  <LogoLink
-                    logo={"/habilidades/reactlogo.png"}
-                    linkEsp={"https://es.wikipedia.org/wiki/React"}
-                    linkIng={
-                      "https://en.wikipedia.org/wiki/React_(JavaScript_library)"
-                    }
-                    isSpanish={isSpanish}
-                  ></LogoLink>
-                </div>
-                <h3 className="text-xl font-bold text-[#7291be]">React</h3>
-                <p className="text-[#6b7a8f] h-32">
-                  {isSpanish
+                    : "I have created interactive and dynamic frontend applications with JavaScript, handling asynchronous functionalities and DOM manipulation."
+                }
+              />
+              <SkillCard
+                logo="/habilidades/reactlogo.png"
+                linkEsp="https://es.wikipedia.org/wiki/React"
+                linkIng="https://en.wikipedia.org/wiki/React_(JavaScript_library)"
+                isSpanish={isSpanish}
+                title="React"
+                description={
+                  isSpanish
                     ? "He construido interfaces de usuario eficientes y reutilizables con React, utilizando hooks y context API para la gestión del estado y la lógica de los componentes."
-                    : "I have built efficient and reusable user interfaces with React, utilizing hooks and context API for state management and component logic."}
-                </p>
-              </div>
-              <div className="grid gap-1">
-                <div className="flex items-end justify-center mb-4 h-40">
-                  {/*NODEJS LOGO*/}
-                  <LogoLink
-                    logo={"/habilidades/nodelogo.png"}
-                    linkEsp={"https://es.wikipedia.org/wiki/Node.js"}
-                    linkIng={"https://en.wikipedia.org/wiki/Node.js"}
-                    isSpanish={isSpanish}
-                  ></LogoLink>
-                </div>
-                <h3 className="text-xl font-bold text-[#7291be]">NodeJs</h3>
-                <p className="text-[#6b7a8f] h-32">
-                  {isSpanish
+                    : "I have built efficient and reusable user interfaces with React, utilizing hooks and context API for state management and component logic."
+                }
+              />
+              <SkillCard
+                logo="/habilidades/nodelogo.png"
+                linkEsp="https://es.wikipedia.org/wiki/Node.js"
+                linkIng="https://en.wikipedia.org/wiki/Node.js"
+                isSpanish={isSpanish}
+                title="NodeJs"
+                description={
+                  isSpanish
                     ? "He creado servidores eficientes y escalables con Node.js, manejando el procesamiento asíncrono y la gestión de paquetes con npm."
-                    : "I have created efficient and scalable servers with Node.js, handling asynchronous processing and package management with npm."}
-                </p>
-              </div>
-              <div className="grid gap-1">
-                <div className="flex items-end justify-center mb-4 h-40">
-                  {/*HTML LOGO*/}
-                  <LogoLink
-                    logo={"/habilidades/htmllogo.png"}
-                    linkEsp={"https://es.wikipedia.org/wiki/HTML"}
-                    linkIng={"https://en.wikipedia.org/wiki/HTML"}
-                    isSpanish={isSpanish}
-                  ></LogoLink>
-                </div>
-                <h3 className="text-xl font-bold text-[#7291be]">HTML</h3>
-                <p className="text-[#6b7a8f] h-32">
-                  {isSpanish
+                    : "I have created efficient and scalable servers with Node.js, handling asynchronous processing and package management with npm."
+                }
+              />
+              <SkillCard
+                logo="/habilidades/htmllogo.png"
+                linkEsp="https://es.wikipedia.org/wiki/HTML"
+                linkIng="https://en.wikipedia.org/wiki/HTML"
+                isSpanish={isSpanish}
+                title="HTML"
+                description={
+                  isSpanish
                     ? "He diseñado y estructurado contenido web semántico y accesible utilizando HTML, asegurando una base sólida para el desarrollo web."
-                    : "I have designed and structured semantic and accessible web content using HTML, ensuring a solid foundation for web development."}
-                </p>
-              </div>
-              <div className="grid gap-1">
-                <div className="flex items-end justify-center mb-4 h-40">
-                  {/*CSS LOGO*/}
-                  <LogoLink
-                    logo={"/habilidades/csslogo.png"}
-                    linkEsp={"https://es.wikipedia.org/wiki/CSS"}
-                    linkIng={"https://en.wikipedia.org/wiki/CSS"}
-                    isSpanish={isSpanish}
-                  ></LogoLink>
-                </div>
-                <h3 className="text-xl font-bold text-[#7291be]">CSS</h3>
-                <p className="text-[#6b7a8f] h-32">
-                  {isSpanish
+                    : "I have designed and structured semantic and accessible web content using HTML, ensuring a solid foundation for web development."
+                }
+              />
+              <SkillCard
+                logo="/habilidades/csslogo.png"
+                linkEsp="https://es.wikipedia.org/wiki/CSS"
+                linkIng="https://en.wikipedia.org/wiki/CSS"
+                isSpanish={isSpanish}
+                title="CSS"
+                description={
+                  isSpanish
                     ? "He estilizado páginas web con CSS, creando diseños responsivos y atractivos que mejoran la experiencia del usuario."
-                    : "I have styled web pages with CSS, creating responsive and attractive designs that enhance the user experience."}
-                </p>
-              </div>
-              <div className="grid gap-1">
-                <div className="flex items-center justify-center pt-8 mb-4 h-40">
-                  {/*TAILWIND LOGO*/}
-                  <LogoLink
-                    logo={"/habilidades/tailwindlogo.png"}
-                    linkEsp={"https://es.wikipedia.org/wiki/Tailwind_CSS"}
-                    linkIng={"https://en.wikipedia.org/wiki/Tailwind_CSS"}
-                    isSpanish={isSpanish}
-                  ></LogoLink>
-                </div>
-                <h3 className="text-xl font-bold text-[#7291be]">Tailwind</h3>
-                <p className="text-[#6b7a8f] h-32">
-                  {isSpanish
+                    : "I have styled web pages with CSS, creating responsive and attractive designs that enhance the user experience."
+                }
+              />
+              <SkillCard
+                logo="/habilidades/tailwindlogo.png"
+                linkEsp="https://es.wikipedia.org/wiki/Tailwind_CSS"
+                linkIng="https://en.wikipedia.org/wiki/Tailwind_CSS"
+                isSpanish={isSpanish}
+                title="Tailwind"
+                description={
+                  isSpanish
                     ? "He utilizado Tailwind CSS para crear interfaces de usuario consistentes y bien diseñadas, aplicando clases utilitarias para un desarrollo rápido y eficiente."
-                    : "I have used Tailwind CSS to create consistent and well-designed user interfaces, applying utility classes for rapid and efficient development."}
-                </p>
-              </div>
+                    : "I have used Tailwind CSS to create consistent and well-designed user interfaces, applying utility classes for rapid and efficient development."
+                }
+              />
             </div>
-
+            {/*Looper de la sección de tecnologías*/}
             <div className="relative">
-              {/*Looper de la sección de tecnologías*/}
               <Looper isSpanish={isSpanish} />
             </div>
           </div>
