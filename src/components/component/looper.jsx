@@ -28,7 +28,7 @@ const Looper = ({ isSpanish }) => {
           : "Other Technologies"}
       </h2>
 
-      <p className="text-center text-lg text-[#7291be] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed leading-8">
+      <p className="text-center text-lg text-[#9dacc0] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed leading-8">
         {isSpanish
           ? "Tecnologías, librerías, frameworks y programas que también he utilizado"
           : "Tecnologies, libraries, frameworks and programs i also utilized"}

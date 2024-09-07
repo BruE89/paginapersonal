@@ -75,7 +75,6 @@ export function Principal() {
           {/*Botón GitHub*/}
           <Link
             href="https://github.com/BruE89"
-            //Color de Hover boton GitHub
             className="text-white hover:text-[#8b9297] transition-colors animate-fade-in-down"
             prefetch={false}
             target="_blank"
@@ -87,7 +86,6 @@ export function Principal() {
           {/*Botón Slack*/}
           <Link
             href="https://bruno-estala.slack.com"
-            //Color de Hover boton Slack
             className="text-white hover:text-[#8b9297] transition-colors animate-fade-in-down"
             prefetch={false}
             target="_blank"
@@ -401,7 +399,7 @@ export function Principal() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#ffffff]">
                   {isSpanish ? "Mis Proyectos" : "My Projects"}
                 </h2>
-                <p className="max-w-[700px] text-[#7291be] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[700px] text-[#9dacc0] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {isSpanish
                     ? "Echa un vistazo a algunos de los proyectos en los que he trabajado."
                     : "Check out some of the projects I've worked on."}
@@ -619,7 +617,7 @@ export function Principal() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#7291be]">
                   {isSpanish ? "Ponte en Contacto" : "Get in Touch"}
                 </h2>
-                <p className="max-w-[700px] text-[#6b7a8f] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[700px] text-[#9dacc0] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {isSpanish
                     ? "No dudes en comunicarte conmigo si tienes alguna pregunta o si te gustar\u00EDa colaborar en un proyecto."
                     : "Feel free to reach out to me if you have any questions or would like to collaborate on a project."}

@@ -85,7 +85,6 @@ const ParticleBackground = () => {
         detectRetina: true,
       }}
       className="absolute inset-0 w-full h-full z-0"
-      
     />
   ) : null;
 };
