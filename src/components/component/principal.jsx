@@ -260,7 +260,7 @@ export function Principal() {
           id="skills"
           className="relative w-full py-20 md:py-24 lg:py-32 bg-[#0b2845]"
         >
-          <ParticleBackground />
+          <ParticleBackground id="particles1" className="absolute inset-0 w-full h-full"/>
           <div className="relative container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -609,9 +609,10 @@ export function Principal() {
         {/*Sección Contacto---------------------------------------------------------------------------------------------------------*/}
         <section
           id="contact"
-          className="w-full py-12 md:py-24 lg:py-32 bg-[#0b2845]"
+          className="relative w-full py-12 md:py-24 lg:py-32 bg-[#0b2845]"
         >
-          <div className="container mx-auto px-4 md:px-6">
+          <ParticleBackground id="particles2" className="absolute inset-0 w-full h-full"/>
+          <div className="relative container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#7291be]">

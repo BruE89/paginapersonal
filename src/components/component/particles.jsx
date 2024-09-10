@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-const ParticleBackground = () => {
+const ParticleBackground = ({ id, className}) => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const ParticleBackground = () => {
 
   return init ? (
     <Particles
-      id="tsparticles"
+      id={id}
       options={{
         /*background: {
             color: {
@@ -84,7 +84,7 @@ const ParticleBackground = () => {
         },
         detectRetina: true,
       }}
-      className="absolute inset-0 w-full h-full z-0"
+      className={className}
     />
   ) : null;
 };
