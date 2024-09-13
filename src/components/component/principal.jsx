@@ -19,25 +19,23 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
 export function Principal() {
+  // Parte que maneja el botón traductor
   const [isSpanish, setIsSpanish] = useState(true);
   const handleLanguageToggle = () => {
     setIsSpanish(!isSpanish);
   };
-
   // Parte que maneja el envio de datos del submit del formulario
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
@@ -166,28 +164,28 @@ export function Principal() {
           <div className="hidden lg:flex gap-4 sm:gap-6">
             <Link
               href="#about"
-              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
+              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-down"
               prefetch={false}
             >
               {isSpanish ? "Sobre mí" : "About"}
             </Link>
             <Link
               href="#skills"
-              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
+              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-down"
               prefetch={false}
             >
               {isSpanish ? "Habilidades" : "Skills"}
             </Link>
             <Link
               href="#projects"
-              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
+              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-down"
               prefetch={false}
             >
               {isSpanish ? "Proyectos" : "Projects"}
             </Link>
             <Link
               href="#contact"
-              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-up"
+              className="text-sm font-medium hover:underline underline-offset-4 text-white animate-fade-in-down"
               prefetch={false}
             >
               {isSpanish ? "Contacto" : "Contact"}
