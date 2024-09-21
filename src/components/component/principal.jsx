@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
 import ParticleBackground from "@/components/component/particles";
 import SkillCard from "./skillcard";
+import GradualSpacing from "@/components/magicui/gradual-spacing";
+import BoxReveal from "@/components/magicui/box-reveal";
 
 import { FaSlack as SlackIcon, FaGithub as GithubIcon,
    FaLinkedin as LinkedinIcon, FaWhatsapp as WhatsappIcon } from 'react-icons/fa';
@@ -204,20 +206,28 @@ export function Principal() {
           <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-2 items-center">
             <div className="text-center md:text-left">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-[#ffffff] animate-fade-in-left mb-10">
-                {isSpanish ? "Hola, soy Bruno Estala" : "Hi, I'm Bruno Estala"}
+                <GradualSpacing
+                  text={
+                    isSpanish
+                      ? "Hola, soy Bruno Estala"
+                      : "Hi, I'm Bruno Estala"
+                  }
+                />
               </h1>
-              <p className="text-[#ffffff] text-lg mt-4 animate-fade-in-right whitespace-pre-line mb-10">
-                {isSpanish
-                  ? `Soy un desarrollador Full Stack apasionado con una sólida experiencia en crear soluciones web innovadoras y eficientes.
+              <div className="text-[#ffffff] text-lg mt-4 whitespace-pre-line mb-10">
+                <BoxReveal >
+                  {isSpanish
+                    ? `Soy un desarrollador Full Stack apasionado con una sólida experiencia en crear soluciones web innovadoras y eficientes.
                       Con habilidades en tecnologías modernas, combino un enfoque detallista en el backend con una visión creativa en el frontend. 
                       Siempre estoy listo para enfrentar nuevos desafíos y colaborar en equipos dinámicos para impulsar el éxito de proyectos tecnológicos.`
-                  : `I am a passionate Full Stack developer with solid experience in creating innovative and efficient web solutions. 
+                    : `I am a passionate Full Stack developer with solid experience in creating innovative and efficient web solutions. 
                       With skills in modern technologies, I combine a detail-oriented approach in the backend with a creative vision in the frontend. 
                       I am always ready to face new challenges and collaborate with dynamic teams to drive the success of technological projects.`}
-              </p>
-              <div className="mt-6 animate-fade-in-up">
-                <DownloadCV isSpanish={isSpanish} />
+                </BoxReveal>
               </div>
+              <BoxReveal>
+                <DownloadCV isSpanish={isSpanish} />
+              </BoxReveal>
             </div>
             <div className="flex justify-center">
               <Image
@@ -258,7 +268,10 @@ export function Principal() {
           id="skills"
           className="relative w-full py-20 md:py-24 lg:py-32 bg-[#0b2845]"
         >
-          <ParticleBackground id="particles1" className="absolute inset-0 w-full h-full"/>
+          <ParticleBackground
+            id="particles1"
+            className="absolute inset-0 w-full h-full"
+          />
           <div className="relative container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -609,7 +622,10 @@ export function Principal() {
           id="contact"
           className="relative w-full py-12 md:py-24 lg:py-32 bg-[#0b2845]"
         >
-          <ParticleBackground id="particles2" className="absolute inset-0 w-full h-full"/>
+          <ParticleBackground
+            id="particles2"
+            className="absolute inset-0 w-full h-full"
+          />
           <div className="relative container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
