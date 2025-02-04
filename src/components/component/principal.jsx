@@ -417,7 +417,8 @@ export function Principal() {
                 </p>
               </div>
             </div>
-            {/*Contenedor 1*/}
+
+            {/* Contenedor 1 - VetApp */}
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-4 justify-center">
@@ -445,44 +446,47 @@ export function Principal() {
                   src="/spring_app.png"
                   width="550"
                   height="310"
-                  alt="Todo App"
+                  alt="Vet App"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                 />
               </div>
             </div>
-            {/*Contenedor 2*/}
+
+            {/* Contenedor 2 - Ahorcado */}
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex justify-center shadow-2xl">
                 <Image
-                  src="/presupuesto.png"
+                  src="/ahorcado.png"
                   width="550"
                   height="310"
-                  alt="Weather App"
+                  alt="Ahorcado"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                 />
               </div>
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-4">
                   <h3 className="font-bold text-[#7291be] text-3xl">
-                    Presupuestos App
+                    Ahorcado
                   </h3>
                   <p className="text-[#ffffff]">
                     {isSpanish
-                      ? "Aplicación encargada de llevar un seguimiento de presupuestos, límites, categorías, gastos y descripciones"
-                      : "An application responsible for tracking budgets, limits, categories, expenses, and descriptions."}
+                      ? "Juego simple de adivinar la palabra secreta, en español, desarrollado con TypeScript, React y Vite"
+                      : "Simple guess-the-word game, in spanish only, developed using TypeScript, React and Vite"}
                   </p>
                   <div className="flex gap-2">
                     <Link
-                      href="https://presupuestosb.netlify.app/"
+                      href="https://ahorcadoappgame.netlify.app/"
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex shadow-md h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       {isSpanish ? "Demo en vivo" : "Live Demo"}
                     </Link>
                     <Link
-                      href="https://github.com/BruE89/presupuestoapp"
+                      href="https://github.com/BruE89/ahorcadoapp"
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex shadow-md h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
@@ -492,7 +496,8 @@ export function Principal() {
                 </div>
               </div>
             </div>
-            {/*Contenedor 3*/}
+
+            {/* Contenedor 3 - TareasApp */}
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-4 justify-center">
@@ -531,46 +536,45 @@ export function Principal() {
                   src="/tareasapp.png"
                   width="550"
                   height="310"
-                  alt="Todo App"
+                  alt="Tareas app"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full brightness-95"
                 />
               </div>
             </div>
-            {/*Contenedor 4*/}
+
+            {/*Contenedor 4 - PresupuestosApp */}
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex justify-center shadow-2xl">
                 <Image
-                  src="/ahorcado.png"
+                  src="/presupuesto.png"
                   width="550"
                   height="310"
-                  alt="Weather App"
+                  alt="PresupuestoApp"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                 />
               </div>
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-4">
                   <h3 className="font-bold text-[#7291be] text-3xl">
-                    Ahorcado
+                    Presupuestos App
                   </h3>
                   <p className="text-[#ffffff]">
                     {isSpanish
-                      ? "Juego simple de adivinar la palabra secreta, en español, desarrollado con TypeScript, React y Vite"
-                      : "Simple guess-the-word game, in spanish only, developed using TypeScript, React and Vite"}
+                      ? "Aplicación encargada de llevar un seguimiento de presupuestos, límites, categorías, gastos y descripciones"
+                      : "An application responsible for tracking budgets, limits, categories, expenses, and descriptions."}
                   </p>
                   <div className="flex gap-2">
                     <Link
-                      href="https://ahorcadoappgame.netlify.app/"
+                      href="https://presupuestosb.netlify.app/"
                       target="_blank"
-                      rel="noopener noreferrer"
                       className="inline-flex shadow-md h-8 items-center justify-center rounded-md bg-[#4b6a9b] px-4 text-sm font-medium text-white transition-colors hover:bg-[#0b2845] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       {isSpanish ? "Demo en vivo" : "Live Demo"}
                     </Link>
                     <Link
-                      href="https://github.com/BruE89/ahorcadoapp"
+                      href="https://github.com/BruE89/presupuestoapp"
                       target="_blank"
-                      rel="noopener noreferrer"
                       className="inline-flex shadow-md h-8 items-center justify-center rounded-md border border-[#cdd4da] bg-[#f0f4f881] px-4 text-sm font-medium transition-colors hover:bg-[#e9ecef] hover:text-[#4b6a9b] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
@@ -580,7 +584,8 @@ export function Principal() {
                 </div>
               </div>
             </div>
-            {/*Contenedor 5*/}
+
+            {/*Contenedor 5 - Ejercicios */}
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-4 justify-center">
@@ -610,11 +615,12 @@ export function Principal() {
                   src="/ejercicios.png"
                   width="550"
                   height="310"
-                  alt="Todo App"
+                  alt="Ejercicios"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full brightness-95"
                 />
               </div>
             </div>
+
           </div>
         </section>
         {/*Sección Contacto---------------------------------------------------------------------------------------------------------*/}
