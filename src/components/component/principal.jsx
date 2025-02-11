@@ -19,6 +19,7 @@ import Looper from "./looper";
 
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
+import { RetroGrid } from "../magicui/retrogrid";
 
 export function Principal() {
   // Parte que maneja el botón traductor
@@ -398,6 +399,7 @@ export function Principal() {
             </div>
             {/*Looper de la sección de tecnologías*/}
             <div className="relative">
+              <RetroGrid />
               <Looper isSpanish={isSpanish} />
             </div>
           </div>
@@ -470,8 +472,8 @@ export function Principal() {
                   </h3>
                   <p className="text-[#ffffff]">
                     {isSpanish
-                      ? "Juego simple de adivinar la palabra secreta, en español, desarrollado con TypeScript, React y Vite"
-                      : "Simple guess-the-word game, in spanish only, developed using TypeScript, React and Vite"}
+                      ? "Juego simple de adivinar la palabra secreta, en español e inglés, desarrollado con TypeScript, React y Vite"
+                      : "Simple guess-the-word game, in spanish and english, developed using TypeScript, React and Vite"}
                   </p>
                   <div className="flex gap-2">
                     <Link

@@ -10,7 +10,10 @@ module.exports = {
       colors: {
         "custom-blue" : "#294a6b"
       },
-      animation: ['hover'],
+      animation: {
+        grid: 'grid 1s linear infinite',
+        hover: 'hover'
+      },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(135deg, #294a6b 40%, #5D7D9E 80%)',
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -59,6 +62,10 @@ module.exports = {
       "sm": "calc(var(--radius) - 4px)"
     },
     keyframes: {
+      grid: {
+        '0%': { transform: 'translateY(0)' },
+        '100%': { transform: 'translateY(var(--cell-size))' },
+      },
       'slide-left': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
