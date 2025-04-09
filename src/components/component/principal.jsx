@@ -287,7 +287,7 @@ export function Principal() {
               </div>
             </div>
             {/*contenedor principal de la sección de logos*/}
-            <div className="relative mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12 text-center">
+            <div className="relative mx-auto grid max-w-full items-center gap-6 py-12 lg:grid-cols-5 lg:gap-12 text-center">
               <SkillCard
                 logo="/habilidades/javalogo.png"
                 linkEsp="https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)"
@@ -394,6 +394,18 @@ export function Principal() {
                   isSpanish
                     ? "He utilizado Tailwind CSS para crear interfaces de usuario consistentes y bien diseñadas, aplicando clases utilitarias para un desarrollo rápido y eficiente."
                     : "I have used Tailwind CSS to create consistent and well-designed user interfaces, applying utility classes for rapid and efficient development."
+                }
+              />
+              <SkillCard
+                logo="/habilidades/typescriptlogo.png"
+                linkEsp="https://es.wikipedia.org/wiki/Tailwind_CSS"
+                linkIng="https://en.wikipedia.org/wiki/Tailwind_CSS"
+                isSpanish={isSpanish}
+                title="TypeScript"
+                description={
+                  isSpanish
+                    ? "Tengo experiencia utilizando TypeScript para desarrollar proyectos robustos y escalables, aprovechando sus atributos para mejorar la calidad y mantenibilidad del código."
+                    : "Experienced in using TypeScript to build robust and scalable projects, leveraging static typing and modern JavaScript features to improve code quality and maintainability."
                 }
               />
             </div>
