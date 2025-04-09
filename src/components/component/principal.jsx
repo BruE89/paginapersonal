@@ -398,8 +398,8 @@ export function Principal() {
               />
               <SkillCard
                 logo="/habilidades/typescriptlogo.png"
-                linkEsp="https://es.wikipedia.org/wiki/Tailwind_CSS"
-                linkIng="https://en.wikipedia.org/wiki/Tailwind_CSS"
+                linkEsp="https://es.wikipedia.org/wiki/TypeScript"
+                linkIng="https://en.wikipedia.org/wiki/TypeScript"
                 isSpanish={isSpanish}
                 title="TypeScript"
                 description={
